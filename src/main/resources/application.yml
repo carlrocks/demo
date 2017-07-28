@@ -1,0 +1,25 @@
+#debug: true
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/payment
+    username: root
+    password: wokoworks
+    driver-class-name: com.mysql.jdbc.Driver
+
+    druid:
+      name: payment
+      initial-size: 0
+      min-idle: 3
+      max-active: 10
+      max-wait: 60000
+      test-on-borrow: false
+      test-while-idle: true
+      validation-query: SELECT 1
+#      web-stat-filter:
+#        url-pattern: /druid/*
+#        session-stat-enable: true
+#      stat-view-servlet:
+#        login-user-name: root
+#        login-password: hello
